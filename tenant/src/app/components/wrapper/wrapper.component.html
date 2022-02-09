@@ -1,0 +1,23 @@
+
+<h1 class="text-center"> Create Tenant Form </h1>
+<div class="container grid-lg">
+    <form [formGroup]="tenantForm" (ngSubmit)="onSubmit()" >
+    
+        <div class="form-group">    
+            <app-personal-info formControlName="personal"></app-personal-info>
+        </div>
+        <div> 
+            <app-contact-info formControlName="contact"></app-contact-info>
+        </div>
+        <div>
+            <app-address-info formControlName="address"></app-address-info>
+        </div>
+        <div>
+            <app-address-array formControlName="addressArray"></app-address-array>
+        </div>
+<div class="form-group center">
+    <button type="submit" class="btn btn-primary mx-2" [disabled]="!tenantForm.valid">Submit</button>
+    <button type="button" (click)="onReset()" class="btn btn-warning float-right ml-2"> Reset </button>
+</div>
+</form>
+</div>

@@ -1,0 +1,24 @@
+<div class="container grid-lg">
+    <h5 class=""> Tenant contact Information </h5>
+    <ng-container class="form-horizontal" [formGroup]="contactForm">
+        <div class="form-group" >
+            <div class="col-3 col-sm-12">
+                <label class="form-label">Email ID</label>
+            </div>
+            <div class="col-9 col-sm-12">
+                <input class="form-input" type="email" placeholder="Enter email id"
+                formControlName="email" (blur)="onTouched()">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-3 col-sm-12">
+                <label class="form-label">Phone Number</label>
+            </div>
+            <div class="col-9 col-sm-12">
+                <input class="form-input" type="tel" placeholder="Enter phone number"
+                formControlName="phone" (blur)="onTouched()">
+            </div>
+        </div>
+
+    </ng-container>
+</div>
